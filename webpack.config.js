@@ -1,9 +1,11 @@
 
 /** @type {import('webpack').Configuration} */
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const RemoveCommentsPlugin = require('./remove-comments-plugin');
 const path = require('path')
 
 const config = {
+  // parser: 'postcss-scss',
   mode: 'development',
   entry: './src/index.js',
   output: {
@@ -13,6 +15,7 @@ const config = {
     // 输出绝对路径
     path: path.resolve(__dirname, './dist'),
   },
+  // devtool: 'source-map', // source map 设置
   module: {
     rules: [
       {
@@ -54,6 +57,7 @@ const config = {
   },
   plugins: [
     new CleanWebpackPlugin(),
+    new RemoveCommentsPlugin(),
   ]
 }
 

@@ -1,3 +1,22 @@
 .P_homeContainer{
-
+  background-color: #eee;
+  margin-top: 10px;
+  .wrap1 {
+    width: 20%;
+    height: 200px;
+    display: grid;
+    .left {
+      display: inline-block;
+      background-color: #bbbbbb;
+      justify-self: center;
+      align-self: center;
+    }
+    /*&:before{
+      content: "";
+      display: inline-block;
+    }
+    .right {
+      overflow: hidden;
+    }*/
+  }
 }
