@@ -3,7 +3,6 @@ import './Home.scss';
 
 class Home extends Component {
   render() {
-
     function throttle(fn) {
       let canRun = true;
       return function (){
@@ -14,7 +13,6 @@ class Home extends Component {
         }, 500)
       }
     }
-  
     
     console.log(123)
     return (
